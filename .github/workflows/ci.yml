@@ -17,18 +17,6 @@ jobs:
       - name: Cache build
         uses: swatinem/rust-cache@v2
 
-      - name: Install cargo-readme (for README sync)
-        run: |
-          if ! command -v cargo-readme >/dev/null 2>&1; then
-            cargo install cargo-readme --locked
-          fi
-
-      - name: Install cargo-deny
-        run: |
-          if ! command -v cargo-deny >/dev/null 2>&1; then
-            cargo install cargo-deny --locked
-          fi
-
       - name: Format
         run: cargo fmt -- --check
 
