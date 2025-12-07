@@ -39,7 +39,7 @@ pub fn draw(frame: &mut Frame<'_>, cpu: &CpuMonitor, gpu: &GpuMonitor) {
 
     let body_chunks = Layout::default()
         .direction(Direction::Horizontal)
-        .constraints([Constraint::Percentage(60), Constraint::Percentage(40)])
+        .constraints([Constraint::Percentage(67), Constraint::Percentage(33)])
         .split(vertical[2]);
 
     render_cpu_table(frame, body_chunks[0], cpu);
