@@ -11,3 +11,8 @@
 ### Docs and README maintenance
 - Build docs locally: `scripts/build_docs.sh` (outputs to `target/doc`).
 - Regenerate README from crate docs (requires `cargo-readme`): `scripts/update_readme.sh`.
+
+### License
+Licensed under the GNU General Public License v3.0 or later (GPL-3.0-or-later).
+
+License: GPL-3.0-or-later
