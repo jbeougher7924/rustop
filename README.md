@@ -2,7 +2,7 @@
 
 [![CI](https://github.com/jbeougher7924/rustop/actions/workflows/ci.yml/badge.svg)](https://github.com/jbeougher7924/rustop/actions/workflows/ci.yml)
 [![Docs](https://img.shields.io/badge/docs-GitHub%20Pages-blue)](https://jbeougher7924.github.io/rustop)
-[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](LICENSE)
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://github.com/jbeougher7924/rustop/blob/main/LICENSE)
 
 `rustop` is a terminal-based system monitor written in Rust. It shows:
 - Per-thread CPU load
@@ -16,7 +16,7 @@
 - Requirements: Rust toolchain; NVIDIA drivers/NVML for GPU stats (CPU/RAM work without GPU support).
 - Run: `cargo run --release`
 - Quit: press `F10` or `q`/`Q`.
-- Docs: https://jbeougher7924.github.io/rustop
+- Docs: <https://jbeougher7924.github.io/rustop>
 
 ### Docs and README maintenance
 - Build docs locally: `scripts/build_docs.sh` (outputs to `target/doc`).

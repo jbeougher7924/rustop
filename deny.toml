@@ -1,12 +1,9 @@
 [advisories]
-vulnerability = "deny"
-unmaintained = "warn"
-yanked = "deny"
-notice = "warn"
+ignore = [
+    { id = "RUSTSEC-2024-0436", reason = "paste is a transitive dep of ratatui; no maintained alternative yet" },
+]
 
 [licenses]
-unlicensed = "deny"
-copyleft = "warn"
 allow = [
     "GPL-3.0",
     "GPL-3.0-only",
@@ -15,10 +12,35 @@ allow = [
     "MIT",
     "BSD-3-Clause",
     "BSD-2-Clause",
-    "ISC"
+    "ISC",
+    "Zlib",
+    "Unicode-3.0",
 ]
 confidence-threshold = 0.8
+exceptions = []
+
+[licenses.private]
+ignore = false
+registries = []
+
+[bans]
+multiple-versions = "warn"
+wildcards = "allow"
+highlight = "all"
+workspace-default-features = "allow"
+external-default-features = "allow"
+allow = []
+deny = []
+skip = []
+skip-tree = []
 
 [sources]
 unknown-registry = "deny"
 unknown-git = "deny"
+allow-registry = ["https://github.com/rust-lang/crates.io-index"]
+allow-git = []
+
+[sources.allow-org]
+github = []
+gitlab = []
+bitbucket = []
