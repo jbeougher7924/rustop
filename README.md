@@ -27,6 +27,6 @@
 - Please review the Code of Conduct before participating.
 
 ### License
-Licensed under the GNU General Public License v3.0 or later (GPL-3.0-or-later).
+Licensed under the GNU General Public License v3.0 (GPL-3.0).
 
 License: GPL-3.0-or-later
