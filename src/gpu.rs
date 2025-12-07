@@ -27,6 +27,16 @@ impl GpuMonitor {
     }
 
     pub fn refresh(&mut self) {
+        if self.nvml.is_none() {
+            match Nvml::init() {
+                Ok(nvml) => self.nvml = Some(nvml),
+                Err(_) => {
+                    self.stats.clear();
+                    return;
+                }
+            }
+        }
+
         let Some(nvml) = self.nvml.as_ref() else {
             self.stats.clear();
             return;

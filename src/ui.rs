@@ -21,11 +21,7 @@ pub fn draw(frame: &mut Frame<'_>, cpu: &CpuMonitor, gpu: &GpuMonitor) {
         .split(frame.size());
 
     let banner = Paragraph::new(banner_text)
-        .block(
-            Block::default()
-                .title(Span::styled("rustop", Style::default().fg(Color::Blue)))
-                .borders(Borders::ALL),
-        )
+        .block(Block::default().borders(Borders::ALL))
         .wrap(Wrap { trim: true });
     frame.render_widget(banner, vertical[0]);
 
@@ -149,10 +145,9 @@ fn render_cpu_table(frame: &mut Frame<'_>, area: Rect, cpu: &CpuMonitor) {
             let idx = row_idx * columns + col_idx;
             if let Some(usage) = cpu.usages().get(idx) {
                 let color = usage_color(*usage);
-                let bar = utilities::make_bar(*usage);
                 let line = Line::from(vec![
                     Span::raw(format!("CPU {:02}: {:5.1}% ", idx, usage)),
-                    Span::styled(bar, Style::default().fg(color)),
+                    Span::styled(make_bar_no_pct(*usage), Style::default().fg(color)),
                 ]);
                 Cell::from(line)
             } else {
