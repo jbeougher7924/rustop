@@ -17,7 +17,6 @@ pub fn banner_text() -> String {
 
           Rust System & GPU Monitor (rustop)        
 "#,
-        
     )
 }
 

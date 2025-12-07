@@ -21,7 +21,11 @@ pub fn draw(frame: &mut Frame<'_>, cpu: &CpuMonitor, gpu: &GpuMonitor) {
         .split(frame.size());
 
     let banner = Paragraph::new(banner_text)
-        .block(Block::default().borders(Borders::ALL))
+        .block(
+            Block::default()
+                .title(Span::styled("rustop", Style::default().fg(Color::Blue)))
+                .borders(Borders::ALL),
+        )
         .wrap(Wrap { trim: true });
     frame.render_widget(banner, vertical[0]);
 
@@ -56,7 +60,14 @@ fn render_cpu_gauge(frame: &mut Frame<'_>, area: Rect, cpu: &CpuMonitor) {
     let avg_usage = cpu.avg().clamp(0.0, 100.0);
     let gauge_color = usage_color(avg_usage);
     let gauge = Gauge::default()
-        .block(Block::default().title("CPU Average").borders(Borders::ALL))
+        .block(
+            Block::default()
+                .title(Span::styled(
+                    "CPU Average",
+                    Style::default().fg(Color::Blue),
+                ))
+                .borders(Borders::ALL),
+        )
         .gauge_style(Style::default().fg(gauge_color))
         .ratio(f64::from(avg_usage) / 100.0)
         .label(format!("{:5.1}%", avg_usage));
@@ -79,7 +90,11 @@ fn render_memory_gauge(frame: &mut Frame<'_>, area: Rect, cpu: &CpuMonitor) {
     };
 
     let gauge = Gauge::default()
-        .block(Block::default().title("RAM Usage").borders(Borders::ALL))
+        .block(
+            Block::default()
+                .title(Span::styled("RAM Usage", Style::default().fg(Color::Blue)))
+                .borders(Borders::ALL),
+        )
         .gauge_style(Style::default().fg(gauge_color))
         .ratio(ratio)
         .label(label);
@@ -92,7 +107,11 @@ fn render_info_panel(frame: &mut Frame<'_>, area: Rect, cpu: &CpuMonitor, gpu: &
         cpu.thread_count(),
         gpu.stats().len()
     ))
-    .block(Block::default().title("Info").borders(Borders::ALL));
+    .block(
+        Block::default()
+            .title(Span::styled("Info", Style::default().fg(Color::Blue)))
+            .borders(Borders::ALL),
+    );
     frame.render_widget(info, area);
 }
 
@@ -101,7 +120,10 @@ fn render_cpu_table(frame: &mut Frame<'_>, area: Rect, cpu: &CpuMonitor) {
     if thread_count == 0 {
         let empty = Paragraph::new("No CPU data available").block(
             Block::default()
-                .title("Per-thread usage")
+                .title(Span::styled(
+                    "Per-thread usage",
+                    Style::default().fg(Color::Blue),
+                ))
                 .borders(Borders::ALL),
         );
         frame.render_widget(empty, area);
@@ -143,7 +165,10 @@ fn render_cpu_table(frame: &mut Frame<'_>, area: Rect, cpu: &CpuMonitor) {
     let cpu_table = Table::new(cpu_rows, column_constraints)
         .block(
             Block::default()
-                .title("Per-thread usage")
+                .title(Span::styled(
+                    "Per-thread usage",
+                    Style::default().fg(Color::Blue),
+                ))
                 .borders(Borders::ALL),
         )
         .column_spacing(1);
@@ -152,7 +177,9 @@ fn render_cpu_table(frame: &mut Frame<'_>, area: Rect, cpu: &CpuMonitor) {
 }
 
 fn render_gpu_panel(frame: &mut Frame<'_>, area: Rect, gpu: &GpuMonitor) {
-    let panel = Block::default().title("GPU Usage").borders(Borders::ALL);
+    let panel = Block::default()
+        .title(Span::styled("GPU Usage", Style::default().fg(Color::Blue)))
+        .borders(Borders::ALL);
     frame.render_widget(&panel, area);
     let inner = panel.inner(area);
 
