@@ -1,20 +1,9 @@
-fn print_banner() {
-    println!(
-        r#"
-██████╗ ██╗   ██╗███████╗████████╗ ██████╗ ██████╗ 
-██╔══██╗██║   ██║██╔════╝╚══██╔══╝██╔═══██╗██╔══██╗
-██████╔╝██║   ██║║██████╗   ██║   ██║   ██║██████╔╝
-██╔══██╗██║   ██║╚════██║   ██║   ██║   ██║██╔═══╝
-██║  ██║╚██████╔╝██████╔╝   ██║   ╚██████╔╝██║  
-╚═╝  ╚═╝ ╚═════╝ ╚═════╝    ╚═╝    ╚═════╝ ╚═╝  
+mod app;
+mod cpu;
+mod gpu;
+mod ui;
+mod utilities;
 
-          Rust System & GPU Monitor (rustop)
-          Press 'q' to quit.
-"#
-    );
-}
-
-fn main() {
-    println!("Hello, world!");
-    print_banner();
+fn main() -> Result<(), Box<dyn std::error::Error>> {
+    app::run()
 }

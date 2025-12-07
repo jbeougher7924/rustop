@@ -1,0 +1,741 @@
+
+[Sun Dec  7 11:09:32 AM CST 2025] Starting NVIDIA driver repair
+[Sun Dec  7 11:09:32 AM CST 2025] Purging legacy packages:
+  firmware-nvidia-gsp
+  libcuda1
+  libcudadebugger1
+  libnvcuvid1
+  libnvidia-allocator1
+  libnvidia-api1
+  libnvidia-cfg1
+  libnvidia-eglcore
+  libnvidia-encode1
+  libnvidia-glcore
+  libnvidia-glvkspirv
+  libnvidia-gpucomp
+  libnvidia-ml1
+  libnvidia-ngx1
+  libnvidia-nvvm4
+  libnvidia-nvvm704
+  libnvidia-opticalflow1
+  libnvidia-pkcs11-openssl3
+  libnvidia-present
+  libnvidia-ptxjitcompiler1
+  libnvidia-rtcore
+  libnvidia-sandboxutils
+  libnvidia-vksc-core
+  libnvoptix1
+  nvidia-egl-icd
+  nvidia-kernel-support
+  nvidia-modprobe
+  nvidia-opencl-icd
+  nvidia-persistenced
+  nvidia-settings
+  nvidia-vdpau-driver
+  nvidia-vulkan-icd
+  nvidia-xconfig
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+You might want to run 'apt --fix-broken install' to correct these.
+The following packages have unmet dependencies:
+ libcuinj64-12.0 : Depends: libnvidia-compute-535 (>= 525) but it is not going to be installed or
+                            libnvidia-compute-535-server (>= 525) but it is not going to be installed or
+                            libnvidia-compute-525 (>= 525) but it is not going to be installed or
+                            libnvidia-compute-525-server (>= 525) but it is not going to be installed or
+                            libcuda.so.1 (>= 525) or
+                            libcuda-12.0-1
+ libegl-nvidia0 : Depends: libnvidia-eglcore (>= 575.57.08) but it is not going to be installed
+ libgles-nvidia1 : Depends: libnvidia-eglcore (= 575.57.08-1) but it is not going to be installed
+ libgles-nvidia2 : Depends: libnvidia-eglcore (= 575.57.08-1) but it is not going to be installed
+ libglx-nvidia0 : Depends: libnvidia-eglcore (>= 575.57.08) but it is not going to be installed
+                  Depends: libnvidia-glcore (>= 575.57.08) but it is not going to be installed
+ libnvidia-decode-580:i386 : Depends: libnvidia-compute-580:i386 (= 580.95.05-0ubuntu0.24.04.2) but it is not going to be installed
+ libnvidia-ml-dev : Depends: libnvidia-compute-535 (>= 525) but it is not going to be installed or
+                             libnvidia-compute-535-server (>= 525) but it is not going to be installed or
+                             libnvidia-compute-525 (>= 525) but it is not going to be installed or
+                             libnvidia-compute-525-server (>= 525) but it is not going to be installed or
+                             libnvidia-ml.so.1 (>= 525)
+ nsight-systems-target : Depends: libnvidia-compute-535 (>= 525) but it is not going to be installed or
+                                  libnvidia-compute-535-server (>= 525) but it is not going to be installed or
+                                  libnvidia-compute-525 (>= 525) but it is not going to be installed or
+                                  libnvidia-compute-525-server (>= 525) but it is not going to be installed or
+                                  libcuda.so.1 (>= 525) or
+                                  libcuda-12.0-1
+ nvidia-compute-utils-580 : Depends: libnvidia-compute-580 but it is not going to be installed
+ nvidia-cuda-dev : Depends: libnvidia-compute-535 (>= 525) but it is not going to be installed or
+                            libnvidia-compute-535-server (>= 525) but it is not going to be installed or
+                            libnvidia-compute-525 (>= 525) but it is not going to be installed or
+                            libnvidia-compute-525-server (>= 525) but it is not going to be installed or
+                            libcuda.so.1 (>= 525) or
+                            libcuda-12.0-1
+                   Recommends: libnvcuvid1 but it is not going to be installed
+ nvidia-driver-580 : Depends: libnvidia-gl-580 (= 580.95.05-0ubuntu0.24.04.2) but it is not going to be installed
+                     Depends: libnvidia-compute-580 (= 580.95.05-0ubuntu0.24.04.2) but it is not going to be installed
+                     Depends: libnvidia-extra-580 (= 580.95.05-0ubuntu0.24.04.2) but it is not going to be installed
+                     Depends: libnvidia-decode-580 (= 580.95.05-0ubuntu0.24.04.2) but it is not going to be installed
+                     Depends: libnvidia-encode-580 (= 580.95.05-0ubuntu0.24.04.2) but it is not going to be installed
+                     Depends: nvidia-utils-580 (= 580.95.05-0ubuntu0.24.04.2) but it is not going to be installed
+                     Depends: libnvidia-cfg1-580 (= 580.95.05-0ubuntu0.24.04.2) but it is not going to be installed
+                     Recommends: nvidia-settings but it is not going to be installed
+                     Recommends: libnvidia-compute-580:i386 (= 580.95.05-0ubuntu0.24.04.2)
+                     Recommends: libnvidia-gl-580:i386 (= 580.95.05-0ubuntu0.24.04.2)
+ xserver-xorg-video-nvidia : Depends: libnvidia-glcore (>= 575.57.08) but it is not going to be installed
+                             Recommends: nvidia-driver (= 575.57.08-1) but it is not going to be installed
+                             Recommends: nvidia-vdpau-driver (>= 575.57.08) but it is not going to be installed
+                             Recommends: nvidia-vulkan-icd (= 575.57.08-1) but it is not going to be installed
+                             Recommends: nvidia-kernel-dkms (= 575.57.08-1) but it is not going to be installed or
+                                         nvidia-kernel-575.57.08 or
+                                         nvidia-open-kernel-575.57.08 but it is not installable
+ xserver-xorg-video-nvidia-580 : Depends: libnvidia-cfg1-580 (= 580.95.05-0ubuntu0.24.04.2) but it is not going to be installed
+E: Unmet dependencies. Try 'apt --fix-broken install' with no packages (or specify a solution).
+
+[Sun Dec  7 11:12:59 AM CST 2025] Starting NVIDIA driver repair
+[Sun Dec  7 11:12:59 AM CST 2025] Purging legacy packages:
+  firmware-nvidia-gsp
+  libcuda1
+  libcudadebugger1
+  libnvcuvid1
+  libnvidia-allocator1
+  libnvidia-api1
+  libnvidia-cfg1
+  libnvidia-eglcore
+  libnvidia-encode1
+  libnvidia-glcore
+  libnvidia-glvkspirv
+  libnvidia-gpucomp
+  libnvidia-ml1
+  libnvidia-ngx1
+  libnvidia-nvvm4
+  libnvidia-nvvm704
+  libnvidia-opticalflow1
+  libnvidia-pkcs11-openssl3
+  libnvidia-present
+  libnvidia-ptxjitcompiler1
+  libnvidia-rtcore
+  libnvidia-sandboxutils
+  libnvidia-vksc-core
+  libnvoptix1
+  nvidia-egl-icd
+  nvidia-kernel-support
+  nvidia-modprobe
+  nvidia-opencl-icd
+  nvidia-persistenced
+  nvidia-settings
+  nvidia-vdpau-driver
+  nvidia-vulkan-icd
+  nvidia-xconfig
+  libegl-nvidia0
+  libegl-nvidia0:i386
+  libgles-nvidia1
+  libgles-nvidia1:i386
+  libgles-nvidia2
+  libgles-nvidia2:i386
+  libglx-nvidia0
+  libglx-nvidia0:i386
+  libcuinj64-12.0
+  libnvidia-ml-dev
+  nsight-systems-target
+  nvidia-cuda-dev
+  xserver-xorg-video-nvidia
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+You might want to run 'apt --fix-broken install' to correct these.
+The following packages have unmet dependencies:
+ libnvidia-decode-580:i386 : Depends: libnvidia-compute-580:i386 (= 580.95.05-0ubuntu0.24.04.2) but it is not going to be installed
+ nsight-systems : Depends: nsight-systems-target (= 2022.4.2.50~12.0.1-4build4) but it is not going to be installed
+ nvidia-compute-utils-580 : Depends: libnvidia-compute-580 but it is not going to be installed
+ nvidia-cuda-toolkit : Depends: nvidia-cuda-dev (= 12.0.146~12.0.1-4build4) but it is not going to be installed
+ nvidia-driver-580 : Depends: libnvidia-gl-580 (= 580.95.05-0ubuntu0.24.04.2) but it is not going to be installed
+                     Depends: libnvidia-compute-580 (= 580.95.05-0ubuntu0.24.04.2) but it is not going to be installed
+                     Depends: libnvidia-extra-580 (= 580.95.05-0ubuntu0.24.04.2) but it is not going to be installed
+                     Depends: libnvidia-decode-580 (= 580.95.05-0ubuntu0.24.04.2) but it is not going to be installed
+                     Depends: libnvidia-encode-580 (= 580.95.05-0ubuntu0.24.04.2) but it is not going to be installed
+                     Depends: nvidia-utils-580 (= 580.95.05-0ubuntu0.24.04.2) but it is not going to be installed
+                     Depends: libnvidia-cfg1-580 (= 580.95.05-0ubuntu0.24.04.2) but it is not going to be installed
+                     Recommends: nvidia-settings but it is not going to be installed
+                     Recommends: libnvidia-compute-580:i386 (= 580.95.05-0ubuntu0.24.04.2)
+                     Recommends: libnvidia-gl-580:i386 (= 580.95.05-0ubuntu0.24.04.2)
+ nvidia-profiler : Depends: libcuinj64-12.0 (= 12.0.146~12.0.1-4build4) but it is not going to be installed
+ nvidia-vulkan-icd:i386 : Depends: libglx-nvidia0:i386 (= 575.57.08-1) but it is not going to be installed
+ xserver-xorg-video-nvidia-580 : Depends: libnvidia-cfg1-580 (= 580.95.05-0ubuntu0.24.04.2) but it is not going to be installed
+E: Unmet dependencies. Try 'apt --fix-broken install' with no packages (or specify a solution).
+
+[Sun Dec  7 11:15:00 AM CST 2025] Starting NVIDIA driver repair
+[Sun Dec  7 11:15:01 AM CST 2025] Purging legacy packages:
+  firmware-nvidia-gsp
+  libcuda1
+  libcudadebugger1
+  libnvcuvid1
+  libnvidia-allocator1
+  libnvidia-api1
+  libnvidia-cfg1
+  libnvidia-eglcore
+  libnvidia-encode1
+  libnvidia-glcore
+  libnvidia-glvkspirv
+  libnvidia-gpucomp
+  libnvidia-ml1
+  libnvidia-ngx1
+  libnvidia-nvvm4
+  libnvidia-nvvm704
+  libnvidia-opticalflow1
+  libnvidia-pkcs11-openssl3
+  libnvidia-present
+  libnvidia-ptxjitcompiler1
+  libnvidia-rtcore
+  libnvidia-sandboxutils
+  libnvidia-vksc-core
+  libnvoptix1
+  nvidia-egl-icd
+  nvidia-kernel-support
+  nvidia-modprobe
+  nvidia-opencl-icd
+  nvidia-persistenced
+  nvidia-settings
+  nvidia-vdpau-driver
+  nvidia-vulkan-icd
+  nvidia-xconfig
+  libegl-nvidia0
+  libegl-nvidia0:i386
+  libgles-nvidia1
+  libgles-nvidia1:i386
+  libgles-nvidia2
+  libgles-nvidia2:i386
+  libglx-nvidia0
+  libglx-nvidia0:i386
+  libcuinj64-12.0
+  libnvidia-ml-dev
+  nsight-systems-target
+  nvidia-cuda-dev
+  xserver-xorg-video-nvidia
+  nsight-systems
+  nsight-systems-target
+  nvidia-cuda-toolkit
+  nvidia-profiler
+  libcuinj64-12.0
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+You might want to run 'apt --fix-broken install' to correct these.
+The following packages have unmet dependencies:
+ libnvidia-decode-580:i386 : Depends: libnvidia-compute-580:i386 (= 580.95.05-0ubuntu0.24.04.2) but it is not going to be installed
+ nvidia-compute-utils-580 : Depends: libnvidia-compute-580 but it is not going to be installed
+ nvidia-driver-580 : Depends: libnvidia-gl-580 (= 580.95.05-0ubuntu0.24.04.2) but it is not going to be installed
+                     Depends: libnvidia-compute-580 (= 580.95.05-0ubuntu0.24.04.2) but it is not going to be installed
+                     Depends: libnvidia-extra-580 (= 580.95.05-0ubuntu0.24.04.2) but it is not going to be installed
+                     Depends: libnvidia-decode-580 (= 580.95.05-0ubuntu0.24.04.2) but it is not going to be installed
+                     Depends: libnvidia-encode-580 (= 580.95.05-0ubuntu0.24.04.2) but it is not going to be installed
+                     Depends: nvidia-utils-580 (= 580.95.05-0ubuntu0.24.04.2) but it is not going to be installed
+                     Depends: libnvidia-cfg1-580 (= 580.95.05-0ubuntu0.24.04.2) but it is not going to be installed
+                     Recommends: nvidia-settings but it is not going to be installed
+                     Recommends: libnvidia-compute-580:i386 (= 580.95.05-0ubuntu0.24.04.2)
+                     Recommends: libnvidia-gl-580:i386 (= 580.95.05-0ubuntu0.24.04.2)
+ nvidia-visual-profiler : Depends: nvidia-profiler (= 12.0.146~12.0.1-4build4) but it is not going to be installed
+ nvidia-vulkan-icd:i386 : Depends: libglx-nvidia0:i386 (= 575.57.08-1) but it is not going to be installed
+ xserver-xorg-video-nvidia-580 : Depends: libnvidia-cfg1-580 (= 580.95.05-0ubuntu0.24.04.2) but it is not going to be installed
+E: Unmet dependencies. Try 'apt --fix-broken install' with no packages (or specify a solution).
+
+[Sun Dec  7 11:16:12 AM CST 2025] Starting NVIDIA driver repair
+[Sun Dec  7 11:16:13 AM CST 2025] Purging legacy packages:
+  firmware-nvidia-gsp
+  libcuda1
+  libcudadebugger1
+  libcuinj64-12.0
+  libegl-nvidia0
+  libegl-nvidia0:i386
+  libgles-nvidia1
+  libgles-nvidia1:i386
+  libgles-nvidia2
+  libgles-nvidia2:i386
+  libglx-nvidia0
+  libglx-nvidia0:i386
+  libnvcuvid1
+  libnvidia-allocator1
+  libnvidia-api1
+  libnvidia-cfg1
+  libnvidia-decode-580:i386
+  libnvidia-eglcore
+  libnvidia-encode1
+  libnvidia-glcore
+  libnvidia-glvkspirv
+  libnvidia-gpucomp
+  libnvidia-ml1
+  libnvidia-ml-dev
+  libnvidia-ngx1
+  libnvidia-nvvm4
+  libnvidia-nvvm704
+  libnvidia-opticalflow1
+  libnvidia-pkcs11-openssl3
+  libnvidia-present
+  libnvidia-ptxjitcompiler1
+  libnvidia-rtcore
+  libnvidia-sandboxutils
+  libnvidia-vksc-core
+  libnvoptix1
+  nsight-systems
+  nsight-systems-target
+  nvidia-compute-utils-580
+  nvidia-cuda-dev
+  nvidia-cuda-toolkit
+  nvidia-egl-icd
+  nvidia-kernel-support
+  nvidia-modprobe
+  nvidia-opencl-icd
+  nvidia-persistenced
+  nvidia-profiler
+  nvidia-settings
+  nvidia-vdpau-driver
+  nvidia-visual-profiler
+  nvidia-vulkan-icd
+  nvidia-vulkan-icd:i386
+  nvidia-xconfig
+  xserver-xorg-video-nvidia
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+You might want to run 'apt --fix-broken install' to correct these.
+The following packages have unmet dependencies:
+ libnvidia-encode-580:i386 : Depends: libnvidia-decode-580:i386 (>= 580.95.05) but it is not going to be installed
+ nvidia-driver-580 : Depends: libnvidia-gl-580 (= 580.95.05-0ubuntu0.24.04.2) but it is not going to be installed
+                     Depends: libnvidia-compute-580 (= 580.95.05-0ubuntu0.24.04.2) but it is not going to be installed
+                     Depends: libnvidia-extra-580 (= 580.95.05-0ubuntu0.24.04.2) but it is not going to be installed
+                     Depends: nvidia-compute-utils-580 (= 580.95.05-0ubuntu0.24.04.2) but it is not going to be installed
+                     Depends: libnvidia-decode-580 (= 580.95.05-0ubuntu0.24.04.2) but it is not going to be installed
+                     Depends: libnvidia-encode-580 (= 580.95.05-0ubuntu0.24.04.2) but it is not going to be installed
+                     Depends: nvidia-utils-580 (= 580.95.05-0ubuntu0.24.04.2) but it is not going to be installed
+                     Depends: libnvidia-cfg1-580 (= 580.95.05-0ubuntu0.24.04.2) but it is not going to be installed
+                     Recommends: nvidia-settings but it is not going to be installed
+                     Recommends: libnvidia-compute-580:i386 (= 580.95.05-0ubuntu0.24.04.2)
+                     Recommends: libnvidia-decode-580:i386 (= 580.95.05-0ubuntu0.24.04.2)
+                     Recommends: libnvidia-gl-580:i386 (= 580.95.05-0ubuntu0.24.04.2)
+ xserver-xorg-video-nvidia-580 : Depends: libnvidia-cfg1-580 (= 580.95.05-0ubuntu0.24.04.2) but it is not going to be installed
+E: Unmet dependencies. Try 'apt --fix-broken install' with no packages (or specify a solution).
+
+[Sun Dec  7 11:16:53 AM CST 2025] Starting NVIDIA driver repair
+[Sun Dec  7 11:16:54 AM CST 2025] Purging legacy packages:
+  firmware-nvidia-gsp
+  libcuda1
+  libcudadebugger1
+  libcuinj64-12.0
+  libegl-nvidia0
+  libegl-nvidia0:i386
+  libgles-nvidia1
+  libgles-nvidia1:i386
+  libgles-nvidia2
+  libgles-nvidia2:i386
+  libglx-nvidia0
+  libglx-nvidia0:i386
+  libnvcuvid1
+  libnvidia-allocator1
+  libnvidia-api1
+  libnvidia-cfg1
+  libnvidia-cfg1-580
+  libnvidia-compute-580
+  libnvidia-decode-580
+  libnvidia-decode-580:i386
+  libnvidia-eglcore
+  libnvidia-encode1
+  libnvidia-encode-580
+  libnvidia-encode-580:i386
+  libnvidia-extra-580
+  libnvidia-gl-580
+  libnvidia-glcore
+  libnvidia-glvkspirv
+  libnvidia-gpucomp
+  libnvidia-ml1
+  libnvidia-ml-dev
+  libnvidia-ngx1
+  libnvidia-nvvm4
+  libnvidia-nvvm704
+  libnvidia-opticalflow1
+  libnvidia-pkcs11-openssl3
+  libnvidia-present
+  libnvidia-ptxjitcompiler1
+  libnvidia-rtcore
+  libnvidia-sandboxutils
+  libnvidia-vksc-core
+  libnvoptix1
+  nsight-systems
+  nsight-systems-target
+  nvidia-compute-utils-580
+  nvidia-cuda-dev
+  nvidia-cuda-toolkit
+  nvidia-driver-580
+  nvidia-egl-icd
+  nvidia-kernel-support
+  nvidia-modprobe
+  nvidia-opencl-icd
+  nvidia-persistenced
+  nvidia-profiler
+  nvidia-settings
+  nvidia-utils-580
+  nvidia-vdpau-driver
+  nvidia-visual-profiler
+  nvidia-vulkan-icd
+  nvidia-vulkan-icd:i386
+  nvidia-xconfig
+  xserver-xorg-video-nvidia
+  xserver-xorg-video-nvidia-580
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Package 'libnvidia-cfg1-580' is not installed, so not removed
+Package 'libnvidia-compute-580' is not installed, so not removed
+Package 'libnvidia-decode-580' is not installed, so not removed. Did you mean 'libnvidia-decode-580:i386'?
+Package 'libnvidia-encode-580' is not installed, so not removed. Did you mean 'libnvidia-encode-580:i386'?
+Package 'libnvidia-extra-580' is not installed, so not removed
+Package 'libnvidia-gl-580' is not installed, so not removed
+Package 'nvidia-utils-580' is not installed, so not removed
+The following packages were automatically installed and are no longer required:
+  libaccinj64-12.0 libatomic1:i386 libbsd0:i386 libcu++-dev libcub-dev
+  libcublas12 libcublaslt12 libcuda1:i386 libcudart12 libcufft11 libcufftw11
+  libcupti-dev libcupti-doc libcupti12 libcurand10 libcusolver11
+  libcusolvermg11 libcusparse12 libdrm-amdgpu1:i386 libdrm-intel1:i386
+  libdrm-radeon1:i386 libdrm2:i386 libedit2:i386 libelf1t64:i386
+  libexpat1:i386 libffi8:i386 libgbm1:i386 libgl1-mesa-dri:i386
+  libglapi-mesa:i386 libgles1:i386 libgles2:i386 libglvnd0:i386
+  libglx-mesa0:i386 libglx0:i386 libibumad3 libicu74:i386 libjpeg62
+  libllvm19:i386 libluajit-5.1-2 libluajit-5.1-common libmsgpackc2 libnppc12
+  libnppial12 libnppicc12 libnppidei12 libnppif12 libnppig12 libnppim12
+  libnppist12 libnppisu12 libnppitc12 libnpps12 libnvblas12
+  libnvidia-allocator1:i386 libnvidia-egl-wayland1 libnvidia-egl-wayland1:i386
+  libnvidia-egl-xcb1 libnvidia-egl-xcb1:i386 libnvidia-egl-xlib1
+  libnvidia-egl-xlib1:i386 libnvidia-eglcore:i386 libnvidia-fbc1-580
+  libnvidia-fbc1-580:i386 libnvidia-glcore:i386 libnvidia-glvkspirv:i386
+  libnvidia-gpucomp:i386 libnvidia-ml1:i386 libnvidia-ptxjitcompiler1:i386
+  libnvjitlink12 libnvjpeg12 libnvrtc-builtins12.0 libnvrtc12 libnvtoolsext1
+  libnvvm4 libopengl0:i386 libpciaccess0:i386 libsensors5:i386 libtermkey1
+  libthrust-dev libtree-sitter0 libunibilium4 libvdpau-dev libvterm0
+  libvulkan1:i386 libwayland-client0:i386 libwayland-server0:i386
+  libx11-6:i386 libx11-xcb1:i386 libxau6:i386 libxcb-dri2-0:i386
+  libxcb-dri3-0:i386 libxcb-glx0:i386 libxcb-present0:i386 libxcb-randr0:i386
+  libxcb-shm0:i386 libxcb-sync1:i386 libxcb-xfixes0:i386 libxcb1:i386
+  libxdmcp6:i386 libxext6:i386 libxfixes3:i386 libxml2:i386 libxshmfence1:i386
+  libxxf86vm1:i386 lua-luv mesa-libgallium:i386 mesa-vulkan-drivers:i386
+  neovim-runtime node-html5shiv nsight-compute nsight-compute-target
+  nvidia-cuda-gdb nvidia-cuda-toolkit-doc nvidia-dkms-580
+  nvidia-firmware-550-550.144.03 nvidia-firmware-580-580.95.05
+  nvidia-kernel-common-580 nvidia-kernel-source-580 nvidia-opencl-dev
+  nvidia-prime ocl-icd-libopencl1:i386 ocl-icd-opencl-dev opencl-c-headers
+  opencl-clhpp-headers python3-greenlet python3-msgpack python3-pynvim xclip
+Use 'sudo apt autoremove' to remove them.
+The following packages will be REMOVED:
+  firmware-nvidia-gsp* libcuda1* libcudadebugger1* libcuinj64-12.0*
+  libegl-nvidia0* libegl-nvidia0:i386* libgles-nvidia1* libgles-nvidia1:i386*
+  libgles-nvidia2* libgles-nvidia2:i386* libglx-nvidia0* libglx-nvidia0:i386*
+  libnvcuvid1* libnvidia-allocator1* libnvidia-api1* libnvidia-cfg1*
+  libnvidia-decode-580:i386* libnvidia-eglcore* libnvidia-encode-580:i386*
+  libnvidia-encode1* libnvidia-glcore* libnvidia-glvkspirv* libnvidia-gpucomp*
+  libnvidia-ml-dev* libnvidia-ml1* libnvidia-ngx1* libnvidia-nvvm4*
+  libnvidia-nvvm704* libnvidia-opticalflow1* libnvidia-pkcs11-openssl3*
+  libnvidia-present* libnvidia-ptxjitcompiler1* libnvidia-rtcore*
+  libnvidia-sandboxutils* libnvidia-vksc-core* libnvoptix1* nsight-systems*
+  nsight-systems-target* nvidia-compute-utils-580* nvidia-cuda-dev*
+  nvidia-cuda-toolkit* nvidia-driver-580* nvidia-egl-icd*
+  nvidia-kernel-support* nvidia-modprobe* nvidia-opencl-icd*
+  nvidia-persistenced* nvidia-profiler* nvidia-settings* nvidia-vdpau-driver*
+  nvidia-visual-profiler* nvidia-vulkan-icd* nvidia-vulkan-icd:i386*
+  nvidia-xconfig* xserver-xorg-video-nvidia* xserver-xorg-video-nvidia-580*
+0 upgraded, 0 newly installed, 56 to remove and 254 not upgraded.
+13 not fully installed or removed.
+After this operation, 4,450 MB disk space will be freed.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 434661 files and directories currently installed.)
+Removing libnvidia-encode-580:i386 (580.95.05-0ubuntu0.24.04.2) ...
+Removing libnvidia-decode-580:i386 (580.95.05-0ubuntu0.24.04.2) ...
+Removing nvidia-driver-580 (580.95.05-0ubuntu0.24.04.2) ...
+Removing nvidia-compute-utils-580 (580.95.05-0ubuntu0.24.04.2) ...
+Removing xserver-xorg-video-nvidia-580 (580.95.05-0ubuntu0.24.04.2) ...
+Removing firmware-nvidia-gsp (575.57.08-1) ...
+Removing libnvidia-present:amd64 (575.57.08-1) ...
+Removing nvidia-cuda-toolkit (12.0.140~12.0.1-4build4) ...
+Removing nvidia-cuda-dev:amd64 (12.0.146~12.0.1-4build4) ...
+Removing libnvoptix1:amd64 (575.57.08-1) ...
+Removing nsight-systems (2022.4.2.50~12.0.1-4build4) ...
+Removing nsight-systems-target:amd64 (2022.4.2.50~12.0.1-4build4) ...
+Removing libcudadebugger1:amd64 (575.57.08-1) ...
+Removing nvidia-visual-profiler (12.0.146~12.0.1-4build4) ...
+Removing nvidia-profiler (12.0.146~12.0.1-4build4) ...
+Removing libcuinj64-12.0:amd64 (12.0.146~12.0.1-4build4) ...
+Removing libegl-nvidia0:i386 (575.57.08-1) ...
+Removing nvidia-egl-icd (575.57.08-1) ...
+Removing libegl-nvidia0:amd64 (575.57.08-1) ...
+Removing libgles-nvidia1:amd64 (575.57.08-1) ...
+Removing libgles-nvidia1:i386 (575.57.08-1) ...
+Removing libgles-nvidia2:i386 (575.57.08-1) ...
+Removing libgles-nvidia2:amd64 (575.57.08-1) ...
+Removing libnvidia-vksc-core (575.57.08-1) ...
+Removing nvidia-vulkan-icd:amd64 (575.57.08-1) ...
+Removing libglx-nvidia0:amd64 (575.57.08-1) ...
+Removing nvidia-vulkan-icd:i386 (575.57.08-1) ...
+Removing libglx-nvidia0:i386 (575.57.08-1) ...
+Removing libnvidia-encode1:amd64 (575.57.08-1) ...
+Removing libnvidia-opticalflow1:amd64 (575.57.08-1) ...
+Removing libnvcuvid1:amd64 (575.57.08-1) ...
+Removing libnvidia-allocator1:amd64 (575.57.08-1) ...
+Removing libnvidia-api1:amd64 (575.57.08-1) ...
+Removing nvidia-xconfig (575.57.08-1) ...
+Removing libnvidia-cfg1:amd64 (575.57.08-1) ...
+Removing libnvidia-eglcore:amd64 (575.57.08-1) ...
+Removing xserver-xorg-video-nvidia (575.57.08-1) ...
+Removing libnvidia-glcore:amd64 (575.57.08-1) ...
+Removing libnvidia-glvkspirv:amd64 (575.57.08-1) ...
+Removing libnvidia-ml-dev:amd64 (12.0.140~12.0.1-4build4) ...
+Removing libnvidia-ml1:amd64 (575.57.08-1) ...
+Removing libnvidia-ngx1 (575.57.08-1) ...
+Removing libnvidia-nvvm4:amd64 (575.57.08-1) ...
+Removing libnvidia-nvvm704:amd64 (575.57.08-1) ...
+Removing libnvidia-rtcore:amd64 (575.57.08-1) ...
+Removing libnvidia-sandboxutils:amd64 (575.57.08-1) ...
+Removing nvidia-modprobe (575.57.08-1) ...
+Removing nvidia-vdpau-driver:amd64 (575.57.08-1) ...
+Removing libcuda1:amd64 (575.57.08-1) ...
+Removing libnvidia-ptxjitcompiler1:amd64 (575.57.08-1) ...
+Removing libnvidia-gpucomp:amd64 (575.57.08-1) ...
+Removing libnvidia-pkcs11-openssl3:amd64 (575.57.08-1) ...
+Setting up libnvidia-fbc1-580:amd64 (580.95.05-0ubuntu0.24.04.2) ...
+Setting up libnvidia-fbc1-580:i386 (580.95.05-0ubuntu0.24.04.2) ...
+Setting up nvidia-prime (0.8.17.2) ...
+Setting up nvidia-kernel-source-580 (580.95.05-0ubuntu0.24.04.2) ...
+Setting up ocl-icd-libopencl1:i386 (2.3.2-1build1) ...
+Setting up nvidia-firmware-580-580.95.05 (580.95.05-0ubuntu0.24.04.2) ...
+Setting up nvidia-kernel-common-580 (580.95.05-0ubuntu0.24.04.2) ...
+Installing new version of config file /etc/modprobe.d/nvidia-graphics-drivers-kms.conf ...
+update-initramfs: deferring update (trigger activated)
+Setting up nvidia-dkms-580 (580.95.05-0ubuntu0.24.04.2) ...
+update-initramfs: deferring update (trigger activated)
+INFO:Enable nvidia
+DEBUG:Parsing /usr/share/ubuntu-drivers-common/quirks/dell_latitude
+DEBUG:Parsing /usr/share/ubuntu-drivers-common/quirks/put_your_quirks_here
+DEBUG:Parsing /usr/share/ubuntu-drivers-common/quirks/lenovo_thinkpad
+Loading new nvidia/580.95.05 DKMS files...
+Deprecated feature: CLEAN (/usr/src/nvidia-580.95.05/dkms.conf)
+Building for 6.8.0-45-generic, 6.14.0-29-generic and 6.14.0-36-generic
+Building for architecture x86_64
+
+Building initial module nvidia/580.95.05 for 6.8.0-45-generic
+Deprecated feature: CLEAN (/var/lib/dkms/nvidia/580.95.05/source/dkms.conf)
+Sign command: /usr/bin/kmodsign
+Signing key: /var/lib/shim-signed/mok/MOK.priv
+Public certificate (MOK): /var/lib/shim-signed/mok/MOK.der
+
+Building module(s).......... done.
+Signing module /var/lib/dkms/nvidia/580.95.05/build/nvidia.ko
+Signing module /var/lib/dkms/nvidia/580.95.05/build/nvidia-modeset.ko
+Signing module /var/lib/dkms/nvidia/580.95.05/build/nvidia-drm.ko
+Signing module /var/lib/dkms/nvidia/580.95.05/build/nvidia-uvm.ko
+Signing module /var/lib/dkms/nvidia/580.95.05/build/nvidia-peermem.ko
+Deprecated feature: CLEAN (/var/lib/dkms/nvidia/580.95.05/source/dkms.conf)
+Installing /lib/modules/6.8.0-45-generic/updates/dkms/nvidia.ko
+Installing /lib/modules/6.8.0-45-generic/updates/dkms/nvidia-modeset.ko
+Installing /lib/modules/6.8.0-45-generic/updates/dkms/nvidia-drm.ko
+Installing /lib/modules/6.8.0-45-generic/updates/dkms/nvidia-uvm.ko
+Installing /lib/modules/6.8.0-45-generic/updates/dkms/nvidia-peermem.ko
+Running depmod... done.
+
+Building initial module nvidia/580.95.05 for 6.14.0-29-generic
+Deprecated feature: CLEAN (/var/lib/dkms/nvidia/580.95.05/source/dkms.conf)
+Sign command: /usr/bin/kmodsign
+Signing key: /var/lib/shim-signed/mok/MOK.priv
+Public certificate (MOK): /var/lib/shim-signed/mok/MOK.der
+
+Building module(s).......... done.
+Signing module /var/lib/dkms/nvidia/580.95.05/build/nvidia.ko
+Signing module /var/lib/dkms/nvidia/580.95.05/build/nvidia-modeset.ko
+Signing module /var/lib/dkms/nvidia/580.95.05/build/nvidia-drm.ko
+Signing module /var/lib/dkms/nvidia/580.95.05/build/nvidia-uvm.ko
+Signing module /var/lib/dkms/nvidia/580.95.05/build/nvidia-peermem.ko
+Deprecated feature: CLEAN (/var/lib/dkms/nvidia/580.95.05/source/dkms.conf)
+Installing /lib/modules/6.14.0-29-generic/updates/dkms/nvidia.ko.zst
+Installing /lib/modules/6.14.0-29-generic/updates/dkms/nvidia-modeset.ko.zst
+Installing /lib/modules/6.14.0-29-generic/updates/dkms/nvidia-drm.ko.zst
+Installing /lib/modules/6.14.0-29-generic/updates/dkms/nvidia-uvm.ko.zst
+Installing /lib/modules/6.14.0-29-generic/updates/dkms/nvidia-peermem.ko.zst
+Running depmod... done.
+
+Building initial module nvidia/580.95.05 for 6.14.0-36-generic
+Deprecated feature: CLEAN (/var/lib/dkms/nvidia/580.95.05/source/dkms.conf)
+Sign command: /usr/bin/kmodsign
+Signing key: /var/lib/shim-signed/mok/MOK.priv
+Public certificate (MOK): /var/lib/shim-signed/mok/MOK.der
+
+Building module(s).......... done.
+Signing module /var/lib/dkms/nvidia/580.95.05/build/nvidia.ko
+Signing module /var/lib/dkms/nvidia/580.95.05/build/nvidia-modeset.ko
+Signing module /var/lib/dkms/nvidia/580.95.05/build/nvidia-drm.ko
+Signing module /var/lib/dkms/nvidia/580.95.05/build/nvidia-uvm.ko
+Signing module /var/lib/dkms/nvidia/580.95.05/build/nvidia-peermem.ko
+Deprecated feature: CLEAN (/var/lib/dkms/nvidia/580.95.05/source/dkms.conf)
+Installing /lib/modules/6.14.0-36-generic/updates/dkms/nvidia.ko.zst
+Installing /lib/modules/6.14.0-36-generic/updates/dkms/nvidia-modeset.ko.zst
+Installing /lib/modules/6.14.0-36-generic/updates/dkms/nvidia-drm.ko.zst
+Installing /lib/modules/6.14.0-36-generic/updates/dkms/nvidia-uvm.ko.zst
+Installing /lib/modules/6.14.0-36-generic/updates/dkms/nvidia-peermem.ko.zst
+Running depmod... done.
+Processing triggers for initramfs-tools (0.142ubuntu25.5) ...
+update-initramfs: Generating /boot/initrd.img-6.14.0-36-generic
+Processing triggers for gnome-menus (3.36.0-1.1ubuntu3) ...
+Processing triggers for libc-bin (2.39-0ubuntu8.6) ...
+Processing triggers for man-db (2.12.0-4build2) ...
+Processing triggers for dbus (1.14.10-4ubuntu4.1) ...
+Processing triggers for desktop-file-utils (0.27-2build1) ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 431823 files and directories currently installed.)
+Purging configuration files for nvidia-persistenced (575.57.08-1) ...
+Purging configuration files for nvidia-compute-utils-580 (580.95.05-0ubuntu0.24.04.2) ...
+Purging configuration files for nvidia-opencl-icd:amd64 (575.57.08-1) ...
+Purging configuration files for nvidia-kernel-support (575.57.08-1) ...
+update-initramfs: deferring update (trigger activated)
+Purging configuration files for nvidia-cuda-toolkit (12.0.140~12.0.1-4build4) ...
+Purging configuration files for nvidia-settings (575.57.08-1) ...
+Processing triggers for initramfs-tools (0.142ubuntu25.5) ...
+update-initramfs: Generating /boot/initrd.img-6.14.0-36-generic
+[Sun Dec  7 11:18:39 AM CST 2025] Running apt --fix-broken install
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following packages were automatically installed and are no longer required:
+  libaccinj64-12.0 libatomic1:i386 libbsd0:i386 libcu++-dev libcub-dev
+  libcublas12 libcublaslt12 libcuda1:i386 libcudart12 libcufft11 libcufftw11
+  libcupti-dev libcupti-doc libcupti12 libcurand10 libcusolver11
+  libcusolvermg11 libcusparse12 libdrm-amdgpu1:i386 libdrm-intel1:i386
+  libdrm-radeon1:i386 libdrm2:i386 libedit2:i386 libelf1t64:i386
+  libexpat1:i386 libffi8:i386 libgbm1:i386 libgl1-mesa-dri:i386
+  libglapi-mesa:i386 libgles1:i386 libgles2:i386 libglvnd0:i386
+  libglx-mesa0:i386 libglx0:i386 libibumad3 libicu74:i386 libjpeg62
+  libllvm19:i386 libluajit-5.1-2 libluajit-5.1-common libmsgpackc2 libnppc12
+  libnppial12 libnppicc12 libnppidei12 libnppif12 libnppig12 libnppim12
+  libnppist12 libnppisu12 libnppitc12 libnpps12 libnvblas12
+  libnvidia-allocator1:i386 libnvidia-egl-wayland1 libnvidia-egl-wayland1:i386
+  libnvidia-egl-xcb1 libnvidia-egl-xcb1:i386 libnvidia-egl-xlib1
+  libnvidia-egl-xlib1:i386 libnvidia-eglcore:i386 libnvidia-fbc1-580
+  libnvidia-fbc1-580:i386 libnvidia-glcore:i386 libnvidia-glvkspirv:i386
+  libnvidia-gpucomp:i386 libnvidia-ml1:i386 libnvidia-ptxjitcompiler1:i386
+  libnvjitlink12 libnvjpeg12 libnvrtc-builtins12.0 libnvrtc12 libnvtoolsext1
+  libnvvm4 libopengl0:i386 libpciaccess0:i386 libsensors5:i386 libtermkey1
+  libthrust-dev libtree-sitter0 libunibilium4 libvdpau-dev libvterm0
+  libvulkan1:i386 libwayland-client0:i386 libwayland-server0:i386
+  libx11-6:i386 libx11-xcb1:i386 libxau6:i386 libxcb-dri2-0:i386
+  libxcb-dri3-0:i386 libxcb-glx0:i386 libxcb-present0:i386 libxcb-randr0:i386
+  libxcb-shm0:i386 libxcb-sync1:i386 libxcb-xfixes0:i386 libxcb1:i386
+  libxdmcp6:i386 libxext6:i386 libxfixes3:i386 libxml2:i386 libxshmfence1:i386
+  libxxf86vm1:i386 lua-luv mesa-libgallium:i386 mesa-vulkan-drivers:i386
+  neovim-runtime node-html5shiv nsight-compute nsight-compute-target
+  nvidia-cuda-gdb nvidia-cuda-toolkit-doc nvidia-dkms-580
+  nvidia-firmware-550-550.144.03 nvidia-firmware-580-580.95.05
+  nvidia-kernel-common-580 nvidia-kernel-source-580 nvidia-opencl-dev
+  nvidia-prime ocl-icd-libopencl1:i386 ocl-icd-opencl-dev opencl-c-headers
+  opencl-clhpp-headers python3-greenlet python3-msgpack python3-pynvim xclip
+Use 'sudo apt autoremove' to remove them.
+0 upgraded, 0 newly installed, 0 to remove and 254 not upgraded.
+[Sun Dec  7 11:18:39 AM CST 2025] Installing nvidia-driver-580 and nvidia-utils-580
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following packages were automatically installed and are no longer required:
+  libaccinj64-12.0 libcu++-dev libcub-dev libcublas12 libcublaslt12
+  libcuda1:i386 libcudart12 libcufft11 libcufftw11 libcupti-dev libcupti-doc
+  libcupti12 libcurand10 libcusolver11 libcusolvermg11 libcusparse12
+  libgl1-mesa-dri:i386 libgles1:i386 libgles2:i386 libglvnd0:i386
+  libglx-mesa0:i386 libglx0:i386 libibumad3 libjpeg62 libluajit-5.1-2
+  libluajit-5.1-common libmsgpackc2 libnppc12 libnppial12 libnppicc12
+  libnppidei12 libnppif12 libnppig12 libnppim12 libnppist12 libnppisu12
+  libnppitc12 libnpps12 libnvblas12 libnvidia-allocator1:i386
+  libnvidia-egl-xcb1 libnvidia-egl-xcb1:i386 libnvidia-egl-xlib1
+  libnvidia-egl-xlib1:i386 libnvidia-eglcore:i386 libnvidia-glcore:i386
+  libnvidia-glvkspirv:i386 libnvidia-gpucomp:i386 libnvidia-ml1:i386
+  libnvidia-ptxjitcompiler1:i386 libnvjitlink12 libnvjpeg12
+  libnvrtc-builtins12.0 libnvrtc12 libnvtoolsext1 libnvvm4 libopengl0:i386
+  libtermkey1 libthrust-dev libtree-sitter0 libunibilium4 libvdpau-dev
+  libvterm0 libvulkan1:i386 libxcb-glx0:i386 libxcb-shm0:i386 libxfixes3:i386
+  libxxf86vm1:i386 lua-luv mesa-vulkan-drivers:i386 neovim-runtime
+  node-html5shiv nsight-compute nsight-compute-target nvidia-cuda-gdb
+  nvidia-cuda-toolkit-doc nvidia-firmware-550-550.144.03 nvidia-opencl-dev
+  ocl-icd-opencl-dev opencl-c-headers opencl-clhpp-headers python3-greenlet
+  python3-msgpack python3-pynvim xclip
+Use 'sudo apt autoremove' to remove them.
+The following additional packages will be installed:
+  libnvidia-cfg1-580 libnvidia-common-580 libnvidia-compute-580
+  libnvidia-compute-580:i386 libnvidia-decode-580 libnvidia-decode-580:i386
+  libnvidia-encode-580 libnvidia-encode-580:i386 libnvidia-extra-580
+  libnvidia-gl-580 libnvidia-gl-580:i386 nvidia-compute-utils-580
+  xserver-xorg-video-nvidia-580
+Recommended packages:
+  nvidia-settings
+The following NEW packages will be installed:
+  libnvidia-cfg1-580 libnvidia-common-580 libnvidia-compute-580
+  libnvidia-compute-580:i386 libnvidia-decode-580 libnvidia-decode-580:i386
+  libnvidia-encode-580 libnvidia-encode-580:i386 libnvidia-extra-580
+  libnvidia-gl-580 libnvidia-gl-580:i386 nvidia-compute-utils-580
+  nvidia-driver-580 nvidia-utils-580 xserver-xorg-video-nvidia-580
+0 upgraded, 15 newly installed, 0 to remove and 254 not upgraded.
+Need to get 0 B/327 MB of archives.
+After this operation, 1,324 MB of additional disk space will be used.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 431817 files and directories currently installed.)
+Preparing to unpack .../00-libnvidia-cfg1-580_580.95.05-0ubuntu0.24.04.2_amd64.deb ...
+Unpacking libnvidia-cfg1-580:amd64 (580.95.05-0ubuntu0.24.04.2) ...
+Preparing to unpack .../01-libnvidia-common-580_580.95.05-0ubuntu0.24.04.2_all.deb ...
+Unpacking libnvidia-common-580 (580.95.05-0ubuntu0.24.04.2) ...
+Preparing to unpack .../02-libnvidia-compute-580_580.95.05-0ubuntu0.24.04.2_amd64.deb ...
+Unpacking libnvidia-compute-580:amd64 (580.95.05-0ubuntu0.24.04.2) ...
+Preparing to unpack .../03-libnvidia-compute-580_580.95.05-0ubuntu0.24.04.2_i386.deb ...
+Unpacking libnvidia-compute-580:i386 (580.95.05-0ubuntu0.24.04.2) ...
+dpkg: error processing archive /tmp/apt-dpkg-install-0VAuIc/03-libnvidia-compute-580_580.95.05-0ubuntu0.24.04.2_i386.deb (--unpack):
+ trying to overwrite '/usr/lib/i386-linux-gnu/libcuda.so', which is also in package libcuda1:i386 575.57.08-1
+Preparing to unpack .../04-libnvidia-decode-580_580.95.05-0ubuntu0.24.04.2_amd64.deb ...
+Unpacking libnvidia-decode-580:amd64 (580.95.05-0ubuntu0.24.04.2) ...
+Selecting previously unselected package libnvidia-decode-580:i386.
+Preparing to unpack .../05-libnvidia-decode-580_580.95.05-0ubuntu0.24.04.2_i386.deb ...
+Unpacking libnvidia-decode-580:i386 (580.95.05-0ubuntu0.24.04.2) ...
+Preparing to unpack .../06-libnvidia-encode-580_580.95.05-0ubuntu0.24.04.2_amd64.deb ...
+Unpacking libnvidia-encode-580:amd64 (580.95.05-0ubuntu0.24.04.2) ...
+Selecting previously unselected package libnvidia-encode-580:i386.
+Preparing to unpack .../07-libnvidia-encode-580_580.95.05-0ubuntu0.24.04.2_i386.deb ...
+Unpacking libnvidia-encode-580:i386 (580.95.05-0ubuntu0.24.04.2) ...
+Preparing to unpack .../08-libnvidia-extra-580_580.95.05-0ubuntu0.24.04.2_amd64.deb ...
+Unpacking libnvidia-extra-580:amd64 (580.95.05-0ubuntu0.24.04.2) ...
+Preparing to unpack .../09-libnvidia-gl-580_580.95.05-0ubuntu0.24.04.2_amd64.deb ...
+dpkg-query: no packages found matching libnvidia-gl-550
+Unpacking libnvidia-gl-580:amd64 (580.95.05-0ubuntu0.24.04.2) ...
+dpkg: error processing archive /tmp/apt-dpkg-install-0VAuIc/09-libnvidia-gl-580_580.95.05-0ubuntu0.24.04.2_amd64.deb (--unpack):
+ trying to overwrite '/usr/share/egl/egl_external_platform.d/20_nvidia_xcb.json', which is also in package libnvidia-egl-xcb1:amd64 1:1.0.1-2
+dpkg-deb: error: paste subprocess was killed by signal (Broken pipe)
+Preparing to unpack .../10-libnvidia-gl-580_580.95.05-0ubuntu0.24.04.2_i386.deb ...
+dpkg-query: no packages found matching libnvidia-gl-550
+Unpacking libnvidia-gl-580:i386 (580.95.05-0ubuntu0.24.04.2) ...
+Selecting previously unselected package nvidia-compute-utils-580.
+Preparing to unpack .../11-nvidia-compute-utils-580_580.95.05-0ubuntu0.24.04.2_amd64.deb ...
+Unpacking nvidia-compute-utils-580 (580.95.05-0ubuntu0.24.04.2) ...
+Preparing to unpack .../12-nvidia-utils-580_580.95.05-0ubuntu0.24.04.2_amd64.deb ...
+Unpacking nvidia-utils-580 (580.95.05-0ubuntu0.24.04.2) ...
+Selecting previously unselected package xserver-xorg-video-nvidia-580.
+Preparing to unpack .../13-xserver-xorg-video-nvidia-580_580.95.05-0ubuntu0.24.04.2_amd64.deb ...
+Unpacking xserver-xorg-video-nvidia-580 (580.95.05-0ubuntu0.24.04.2) ...
+Selecting previously unselected package nvidia-driver-580.
+Preparing to unpack .../14-nvidia-driver-580_580.95.05-0ubuntu0.24.04.2_amd64.deb ...
+Unpacking nvidia-driver-580 (580.95.05-0ubuntu0.24.04.2) ...
+Errors were encountered while processing:
+ /tmp/apt-dpkg-install-0VAuIc/03-libnvidia-compute-580_580.95.05-0ubuntu0.24.04.2_i386.deb
+ /tmp/apt-dpkg-install-0VAuIc/09-libnvidia-gl-580_580.95.05-0ubuntu0.24.04.2_amd64.deb
+E: Sub-process /usr/bin/dpkg returned an error code (1)
