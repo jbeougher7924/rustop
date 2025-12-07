@@ -1,6 +1,13 @@
 pub const QUIT_INSTRUCTIONS: &str = "Press F10 or q/Q to quit.";
 
-const BANNER: &str = r#"
+#[allow(dead_code)]
+pub fn print_banner() {
+    println!("{}", banner_text());
+}
+
+pub fn banner_text() -> String {
+    format!(
+        r#"
 ██████╗ ██╗   ██╗███████╗████████╗ ██████╗ ██████╗ 
 ██╔══██╗██║   ██║██╔════╝╚══██╔══╝██╔═══██╗██╔══██╗
 ██████╔╝██║   ██║║██████╗   ██║   ██║   ██║██████╔╝
@@ -8,17 +15,10 @@ const BANNER: &str = r#"
 ██║  ██║╚██████╔╝██████╔╝   ██║   ╚██████╔╝██║  
 ╚═╝  ╚═╝ ╚═════╝ ╚═════╝    ╚═╝    ╚═════╝ ╚═╝  
 
-          Rust System & GPU Monitor (rustop)
-          Press F10 or q/Q to quit.
-"#;
-
-#[allow(dead_code)]
-pub fn print_banner() {
-    println!("{}", BANNER);
-}
-
-pub fn banner_text() -> &'static str {
-    BANNER
+          Rust System & GPU Monitor (rustop)        
+"#,
+        
+    )
 }
 
 pub fn make_bar(pct: f32) -> String {

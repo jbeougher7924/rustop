@@ -3,13 +3,13 @@ use ratatui::{
     layout::{Alignment, Constraint, Direction, Layout, Rect},
     style::{Color, Style},
     text::{Line, Span},
-    widgets::GraphType,
-    widgets::{Axis, Block, Borders, Cell, Chart, Dataset, Gauge, Paragraph, Row, Table, Wrap},
+    widgets::{Block, Borders, Cell, Gauge, Paragraph, Row, Table, Wrap},
     Frame,
 };
 
 pub fn draw(frame: &mut Frame<'_>, cpu: &CpuMonitor, gpu: &GpuMonitor) {
-    let banner_height = utilities::banner_text().lines().count() as u16;
+    let banner_text = utilities::banner_text();
+    let banner_height = banner_text.lines().count() as u16;
     let vertical = Layout::default()
         .direction(Direction::Vertical)
         .constraints([
@@ -20,8 +20,8 @@ pub fn draw(frame: &mut Frame<'_>, cpu: &CpuMonitor, gpu: &GpuMonitor) {
         ])
         .split(frame.size());
 
-    let banner = Paragraph::new(utilities::banner_text())
-        .block(Block::default().title("rustop").borders(Borders::ALL))
+    let banner = Paragraph::new(banner_text)
+        .block(Block::default().borders(Borders::ALL))
         .wrap(Wrap { trim: true });
     frame.render_widget(banner, vertical[0]);
 
