@@ -1,9 +1,10 @@
 use crate::{cpu::CpuMonitor, gpu::GpuMonitor, utilities};
 use ratatui::{
-    layout::{Constraint, Direction, Layout, Rect},
+    layout::{Alignment, Constraint, Direction, Layout, Rect},
     style::{Color, Style},
     text::{Line, Span},
-    widgets::{Block, Borders, Cell, Gauge, Paragraph, Row, Table, Wrap},
+    widgets::GraphType,
+    widgets::{Axis, Block, Borders, Cell, Chart, Dataset, Gauge, Paragraph, Row, Table, Wrap},
     Frame,
 };
 
@@ -45,8 +46,9 @@ pub fn draw(frame: &mut Frame<'_>, cpu: &CpuMonitor, gpu: &GpuMonitor) {
     render_cpu_table(frame, body_chunks[0], cpu);
     render_gpu_panel(frame, body_chunks[1], gpu);
 
-    let instructions =
-        Paragraph::new("Press F10 or q/Q to quit").style(Style::default().fg(Color::Gray));
+    let instructions = Paragraph::new(utilities::QUIT_INSTRUCTIONS)
+        .style(Style::default().fg(Color::Gray))
+        .alignment(Alignment::Center);
     frame.render_widget(instructions, vertical[3]);
 }
 

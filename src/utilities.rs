@@ -1,3 +1,5 @@
+pub const QUIT_INSTRUCTIONS: &str = "Press F10 or q/Q to quit.";
+
 const BANNER: &str = r#"
 ██████╗ ██╗   ██╗███████╗████████╗ ██████╗ ██████╗ 
 ██╔══██╗██║   ██║██╔════╝╚══██╔══╝██╔═══██╗██╔══██╗
@@ -7,7 +9,7 @@ const BANNER: &str = r#"
 ╚═╝  ╚═╝ ╚═════╝ ╚═════╝    ╚═╝    ╚═════╝ ╚═╝  
 
           Rust System & GPU Monitor (rustop)
-          Press 'F10' to quit.
+          Press F10 or q/Q to quit.
 "#;
 
 #[allow(dead_code)]
