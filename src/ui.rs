@@ -150,6 +150,10 @@ fn render_cpu_table(frame: &mut Frame<'_>, area: Rect, cpu: &CpuMonitor) {
 }
 
 fn render_gpu_panel(frame: &mut Frame<'_>, area: Rect, gpu: &GpuMonitor) {
+    let panel = Block::default().title("GPU Usage").borders(Borders::ALL);
+    frame.render_widget(&panel, area);
+    let inner = panel.inner(area);
+
     let stats = gpu.stats();
     if stats.is_empty() {
         let message = if gpu.nvml_available() {
@@ -157,19 +161,17 @@ fn render_gpu_panel(frame: &mut Frame<'_>, area: Rect, gpu: &GpuMonitor) {
         } else {
             "NVML unavailable - GPU stats disabled"
         };
-        let block = Paragraph::new(message)
-            .block(Block::default().title("GPU usage").borders(Borders::ALL));
-        frame.render_widget(block, area);
+        let block = Paragraph::new(message);
+        frame.render_widget(block, inner);
         return;
     }
 
-    let mut constraints: Vec<Constraint> = Vec::with_capacity(stats.len() + 1);
+    let mut constraints: Vec<Constraint> = Vec::with_capacity(stats.len());
     constraints.extend(std::iter::repeat(Constraint::Length(7)).take(stats.len()));
-    constraints.push(Constraint::Min(0));
     let cards = Layout::default()
         .direction(Direction::Vertical)
         .constraints(constraints)
-        .split(area);
+        .split(inner);
 
     for (chunk, gpu_stat) in cards.iter().zip(stats.iter()) {
         render_gpu_card(frame, *chunk, gpu_stat);
