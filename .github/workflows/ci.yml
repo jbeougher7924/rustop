@@ -20,6 +20,9 @@ jobs:
       - name: Install cargo-readme (for README sync)
         run: cargo install cargo-readme --locked
 
+      - name: Install cargo-deny
+        run: cargo install cargo-deny --locked
+
       - name: Format
         run: cargo fmt -- --check
 
@@ -36,3 +39,6 @@ jobs:
         run: |
           scripts/update_readme.sh
           git diff --exit-code README.md
+
+      - name: Dependency audit
+        run: cargo deny check
