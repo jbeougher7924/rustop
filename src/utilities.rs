@@ -11,8 +11,7 @@ pub fn print_banner() {
 
 /// Build the ASCII banner text displayed at the top of the TUI.
 pub fn banner_text() -> String {
-    format!(
-        r#"
+    r#"
 ██████╗ ██╗   ██╗███████╗████████╗ ██████╗ ██████╗ 
 ██╔══██╗██║   ██║██╔════╝╚══██╔══╝██╔═══██╗██╔══██╗
 ██████╔╝██║   ██║║██████╗   ██║   ██║   ██║██████╔╝
@@ -21,8 +20,8 @@ pub fn banner_text() -> String {
 ╚═╝  ╚═╝ ╚═════╝ ╚═════╝    ╚═╝    ╚═════╝ ╚═╝  
 
           Rust System & GPU Monitor (rustop)        
-"#,
-    )
+"#
+    .to_string()
 }
 
 #[cfg(test)]

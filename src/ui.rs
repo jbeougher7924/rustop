@@ -135,7 +135,7 @@ fn render_cpu_table(frame: &mut Frame<'_>, area: Rect, cpu: &CpuMonitor) {
     if columns == 0 {
         columns = 1;
     }
-    let rows = (thread_count + columns - 1) / columns;
+    let rows = thread_count.div_ceil(columns);
 
     let mut column_constraints = Vec::with_capacity(columns);
     let percentage = (100 / columns as u16).max(1);
@@ -194,7 +194,7 @@ fn render_gpu_panel(frame: &mut Frame<'_>, area: Rect, gpu: &GpuMonitor) {
     }
 
     let mut constraints: Vec<Constraint> = Vec::with_capacity(stats.len());
-    constraints.extend(std::iter::repeat(Constraint::Length(7)).take(stats.len()));
+    constraints.extend(std::iter::repeat_n(Constraint::Length(7), stats.len()));
     let cards = Layout::default()
         .direction(Direction::Vertical)
         .constraints(constraints)
