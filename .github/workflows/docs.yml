@@ -31,6 +31,10 @@ jobs:
       - name: Build docs
         run: cargo doc --no-deps --workspace
 
+      - name: Add root redirect to crate docs
+        run: |
+          echo '<meta http-equiv="refresh" content="0; url=rustop/index.html">' > target/doc/index.html
+
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
