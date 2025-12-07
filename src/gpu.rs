@@ -1,6 +1,9 @@
+//! GPU monitoring via NVIDIA's NVML (when available).
+
 use nvml_wrapper::{enum_wrappers::device::TemperatureSensor, error::NvmlError, Nvml};
 
 #[derive(Debug, Clone)]
+/// Snapshot of a single GPU's metrics.
 pub struct GpuStats {
     pub index: u32,
     pub name: String,
@@ -16,6 +19,7 @@ pub struct GpuMonitor {
 }
 
 impl GpuMonitor {
+    /// Create a new GPU monitor, attempting an initial NVML init.
     pub fn new() -> Self {
         let nvml = Nvml::init().ok();
         let mut monitor = Self {
@@ -26,6 +30,7 @@ impl GpuMonitor {
         monitor
     }
 
+    /// Refresh GPU metrics, retrying NVML initialization if needed.
     pub fn refresh(&mut self) {
         if self.nvml.is_none() {
             match Nvml::init() {
@@ -85,10 +90,12 @@ impl GpuMonitor {
         self.stats = stats;
     }
 
+    /// Latest GPU statistics snapshots.
     pub fn stats(&self) -> &[GpuStats] {
         &self.stats
     }
 
+    /// Whether NVML is currently available.
     pub fn nvml_available(&self) -> bool {
         self.nvml.is_some()
     }

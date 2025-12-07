@@ -1,3 +1,5 @@
+//! Application bootstrap: sets up the terminal and runs the TUI loop.
+
 use std::{
     error::Error,
     io,
@@ -15,6 +17,7 @@ use ratatui::{
     Terminal,
 };
 
+/// Entry point invoked from `main` to run the TUI.
 pub fn run() -> Result<(), Box<dyn Error>> {
     enable_raw_mode()?;
     let mut stdout = io::stdout();

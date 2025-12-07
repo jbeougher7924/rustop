@@ -1,3 +1,5 @@
+//! Rendering layer for the `rustop` TUI.
+
 use crate::{cpu::CpuMonitor, gpu::GpuMonitor, utilities};
 use ratatui::{
     layout::{Alignment, Constraint, Direction, Layout, Rect},
@@ -7,6 +9,7 @@ use ratatui::{
     Frame,
 };
 
+/// Draw the entire UI frame.
 pub fn draw(frame: &mut Frame<'_>, cpu: &CpuMonitor, gpu: &GpuMonitor) {
     let banner_text = utilities::banner_text();
     let banner_height = banner_text.lines().count() as u16;
@@ -280,4 +283,43 @@ fn make_bar_no_pct(pct: f32) -> String {
     let filled = (ratio * total_blocks as f32).round() as usize;
     let empty = total_blocks.saturating_sub(filled);
     format!("[{}{}]", "█".repeat(filled), "-".repeat(empty))
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn usage_color_thresholds() {
+        assert_eq!(usage_color(0.0), Color::Green);
+        assert_eq!(usage_color(39.9), Color::Green);
+        assert_eq!(usage_color(40.0), Color::Yellow);
+        assert_eq!(usage_color(74.9), Color::Yellow);
+        assert_eq!(usage_color(75.0), Color::Rgb(255, 165, 0));
+        assert_eq!(usage_color(89.9), Color::Rgb(255, 165, 0));
+        assert_eq!(usage_color(90.0), Color::Red);
+        assert_eq!(usage_color(150.0), Color::Red);
+    }
+
+    #[test]
+    fn make_bar_no_pct_shapes_bar() {
+        assert_eq!(make_bar_no_pct(0.0), "[--------------------]");
+        assert_eq!(make_bar_no_pct(50.0), "[██████████----------]");
+        assert_eq!(make_bar_no_pct(100.0), "[████████████████████]");
+    }
+
+    #[test]
+    fn format_bytes_handles_units() {
+        assert_eq!(format_bytes(512), "512 B");
+        assert_eq!(format_bytes(1024), "1.0 KB");
+        assert_eq!(format_bytes(1536), "1.5 KB");
+        assert_eq!(format_bytes(1024 * 1024), "1.0 MB");
+    }
+
+    #[test]
+    fn format_bytes_from_kib_converts() {
+        assert_eq!(format_bytes_from_kib(0), "0 B");
+        assert_eq!(format_bytes_from_kib(1), "1.0 KB");
+        assert_eq!(format_bytes_from_kib(1024), "1.0 MB");
+    }
 }

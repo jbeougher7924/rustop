@@ -1,5 +1,8 @@
+//! CPU monitoring helpers.
+
 use sysinfo::System;
 
+/// Captures CPU and memory metrics for display.
 pub struct CpuMonitor {
     system: System,
     usages: Vec<f32>,
@@ -9,6 +12,7 @@ pub struct CpuMonitor {
 }
 
 impl CpuMonitor {
+    /// Construct a new monitor and perform an initial refresh.
     pub fn new() -> Self {
         let system = System::new_all();
         let mut monitor = Self {
@@ -22,6 +26,7 @@ impl CpuMonitor {
         monitor
     }
 
+    /// Refresh CPU and memory metrics.
     pub fn refresh(&mut self) {
         self.system.refresh_cpu();
         self.system.refresh_memory();
@@ -41,22 +46,27 @@ impl CpuMonitor {
         self.memory_used = self.system.used_memory();
     }
 
+    /// Average CPU utilization across all threads.
     pub fn avg(&self) -> f32 {
         self.avg
     }
 
+    /// Per-thread CPU utilization percentages.
     pub fn usages(&self) -> &[f32] {
         &self.usages
     }
 
+    /// Number of CPU threads being tracked.
     pub fn thread_count(&self) -> usize {
         self.usages.len()
     }
 
+    /// Memory usage in KiB (used, total).
     pub fn memory_usage(&self) -> (u64, u64) {
         (self.memory_used, self.memory_total)
     }
 
+    /// Fraction of memory used in the range [0, 1].
     pub fn memory_ratio(&self) -> f64 {
         if self.memory_total == 0 {
             0.0
